@@ -1,5 +1,6 @@
 
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   return (
@@ -15,12 +16,16 @@ const HeroSection = () => {
             Elevate your fashion game with the latest trends.
           </p>
           <div className="flex space-x-4 animate-fade-in">
-            <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50 transition-all duration-300 hover:scale-105">
-              Shop Now
-            </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600 transition-all duration-300">
-              View Collections
-            </Button>
+            <Link to="/search?q=">
+              <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50 transition-all duration-300 hover:scale-105">
+                Shop Now
+              </Button>
+            </Link>
+            <Link to="/search?q=collection">
+              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600 transition-all duration-300">
+                View Collections
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
